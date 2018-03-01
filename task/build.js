@@ -549,6 +549,8 @@ if(fs.existsSync(__dirname + '/build.js')){
             //if(parameter !== 'bundle' && (parameter !== 'lib')){
 
                 xone_config.closure_compiler_jar.options.js.push("'" + xone_manifest.dependencies.xone + "core/init.js'");
+                //xone_config.closure_compiler_jar.options.js.push("'" + xone_manifest.dependencies.xone + "lib/flexsearch.js'");
+                //xone_config.closure_compiler_jar.options.js.push("'" + xone_manifest.dependencies.xone + "**.js'");
             //}
 
             var config_parameters = "";

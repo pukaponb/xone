@@ -543,7 +543,138 @@ goog.require('APP.MAIN');
 
     var initialize_components= function(){
 
+        // if(customElements){
+        //
+        //     customElements.define('xone-view', class extends HTMLElement {
+        //
+        //         // A getter/setter for an open property.
+        //         get open() {
+        //             return this.hasAttribute('open');
+        //         }
+        //
+        //         set open(val) {
+        //             // Reflect the value of the open property as an HTML attribute.
+        //             if (val) {
+        //                 this.setAttribute('open', '');
+        //             } else {
+        //                 this.removeAttribute('open');
+        //             }
+        //             this.toggleDrawer();
+        //         }
+        //
+        //         // A getter/setter for a disabled property.
+        //         get disabled() {
+        //             return this.hasAttribute('disabled');
+        //         }
+        //
+        //         set disabled(val) {
+        //             // Reflect the value of the disabled property as an HTML attribute.
+        //             if (val) {
+        //                 this.setAttribute('disabled', '');
+        //             } else {
+        //                 this.removeAttribute('disabled');
+        //             }
+        //         }
+        //
+        //         // Can define constructor arguments if you wish.
+        //         constructor() {
+        //             // If you define a ctor, always call super() first!
+        //             // This is specific to CE and required by the spec.
+        //             super();
+        //
+        //             // Setup a click listener on <app-drawer> itself.
+        //             this.addEventListener('click', e => {
+        //                 // Don't toggle the drawer if it's disabled.
+        //                 if (this.disabled) {
+        //                     return;
+        //                 }
+        //                 this.toggleDrawer();
+        //             });
+        //         }
+        //
+        //         connectedCallback() {
+        //
+        //         }
+        //         disconnectedCallback() {
+        //
+        //         }
+        //         attributeChangedCallback(attrName, oldVal, newVal) {
+        //
+        //         }
+        //
+        //         toggleDrawer() {
+        //
+        //         }
+        //
+        //         static get observedAttributes() {
+        //             return ['disabled', 'open'];
+        //         }
+        //
+        //         get disabled() {
+        //             return this.hasAttribute('disabled');
+        //         }
+        //
+        //         set disabled(val) {
+        //             if (val) {
+        //                 this.setAttribute('disabled', '');
+        //             } else {
+        //                 this.removeAttribute('disabled');
+        //             }
+        //         }
+        //
+        //         // Only called for the disabled and open attributes due to observedAttributes
+        //         attributeChangedCallback(name, oldValue, newValue) {
+        //             // When the drawer is disabled, update keyboard/screen reader behavior.
+        //             if (this.disabled) {
+        //                 this.setAttribute('tabindex', '-1');
+        //                 this.setAttribute('aria-disabled', 'true');
+        //             } else {
+        //                 this.setAttribute('tabindex', '0');
+        //                 this.setAttribute('aria-disabled', 'false');
+        //             }
+        //             this.toggleDrawer();
+        //         }
+        //     });
+        // }
+
         if(document.registerElement){
+
+            /*
+            <template id="tpl-xone-view">
+                <style>
+
+                    :host {
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        right:0;
+                        left:0;
+                        width:auto;
+                        height:auto;
+                        margin:0;
+                        padding:0;
+                        transition: none;
+                    }
+
+                </style>
+                <slot></slot>
+            </template>
+            */
+
+            /*
+            customElements.define('xone-view', class extends HTMLElement {
+
+                constructor() {
+
+                    super();
+
+                    var shadowRoot = this.attachShadow({mode: 'closed'});
+                    var template = document.querySelector('#tpl-xone-view');
+                    shadowRoot.appendChild(template.content.cloneNode(true));
+                }
+            });
+            //document.registerElement('xone-view', {prototype: element});
+            */
 
             document.registerElement('xone-view');
             document.registerElement('xone-main');
